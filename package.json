@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "concurrently": "^5.2.0",
     "firebase": "^7.15.4",
     "mysql": "^2.18.1",
     "react": "^16.13.1",
@@ -19,9 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "api": "cd api && nodemon server.js",
-    "dev": "concurrently -c 'green,blue' \"npm run api\" \"npm start\""
+    "eject": "react-scripts eject"
   },
   "husky": {
     "hooks": {
