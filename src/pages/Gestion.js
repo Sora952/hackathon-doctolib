@@ -33,7 +33,7 @@ const styles = (theme) => ({
   },
 });
 
-function Dashboard(props) {
+function Gestion(props) {
   const { classes } = props;
 
   if (!firebase.getCurrentUsername()) {
@@ -46,4 +46,4 @@ function Dashboard(props) {
   return <main className={classes.main}>Page gestion des patients</main>;
 }
 
-export default withRouter(withStyles(styles)(Dashboard));
+export default withRouter(withStyles(styles)(Gestion));

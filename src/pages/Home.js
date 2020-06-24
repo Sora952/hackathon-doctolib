@@ -1,9 +1,7 @@
 import React from "react";
-import { Paper, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
-import { Link } from "react-router-dom";
 import "../styles/Home.css";
-import Header from "../components/Navbar";
 import { Link } from "react-router-dom";
 import img from "../images/img.jpg";
 
@@ -37,41 +35,41 @@ const styles = (theme) => ({
   },
 });
 
-function HomePage(props) {
+function Home(props) {
   const { classes } = props;
-return (
+  return (
     <div className="home">
-      <Header />
       <img src={img} alt="banniere" className="banniere" />
       <div className="auth-button">
         <Link to="/sign">
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          color="secondary"
-          component={Link}
-          to="/register"
-          className={classes.submit}
-        >
-          Register
-        </Button>        </Link>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="secondary"
+            component={Link}
+            to="/register"
+            className={classes.submit}
+          >
+            Register
+          </Button>{" "}
+        </Link>
         <Link to="/login">
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          color="secondary"
-          component={Link}
-          to="/login"
-          className={classes.submit}
-        >
-          Login
-        </Button>        </Link>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="secondary"
+            component={Link}
+            to="/login"
+            className={classes.submit}
+          >
+            Login
+          </Button>
+        </Link>
       </div>
     </div>
   );
-
+}
 
 export default withStyles(styles)(Home);
-
