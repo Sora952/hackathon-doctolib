@@ -8,7 +8,7 @@ function Page1() {
     <div className="home">
       <Navbar />
       <h1>Hackathon Doctolib Page 1</h1>
-      <div className=''>
+      <div className="">
         <button>Mes analyses</button>
         <button>Lien avec mon médecin</button>
         <button>Gros gros bouton</button>
