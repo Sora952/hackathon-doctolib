@@ -1,14 +1,57 @@
 import React from "react";
-import "../styles/footer.css";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Link from "@material-ui/core/Link";
 
-const Footer = () => {
+function Copyright() {
   return (
-    <div>
-      <footer className="footer">
-        copyrigth by Camille without Lancelot but make with &#10084; 2020
+    <Typography variant="body2" color="textSecondary">
+      {"Copyright © "}
+      <Link color="inherit" href="https://material-ui.com/">
+        Hackathon
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  },
+  footer: {
+    padding: theme.spacing(3, 2),
+    marginTop: "auto",
+    backgroundColor:
+      theme.palette.type === "light"
+        ? theme.palette.grey[200]
+        : theme.palette.grey[800],
+  },
+}));
+
+export default function Footer() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <footer
+        className={classes.footer}
+        style={{ backgroundColor: "var(--blue)" }}
+      >
+        <Container maxWidth="sm">
+          <Typography variant="body1">
+            La santé est le trésor de la vie.
+          </Typography>
+          <Copyright />
+        </Container>
       </footer>
     </div>
   );
-};
-
-export default Footer;
+}

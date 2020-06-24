@@ -1,15 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/navbar.css";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
 
-const Navbar = () => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+}));
+
+export default function Navbar() {
+  const classes = useStyles();
+
   return (
-    <nav className='navbar'>
-      <Link to="/">
-        <div className='logo-doctolib'>Doctolib</div>
-      </Link>
-    </nav>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar style={{ backgroundColor: "var(--blue)" }}>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+          >
+            Hackathon
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
-};
-
-export default Navbar;
+}
