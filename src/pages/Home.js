@@ -2,6 +2,10 @@ import React from "react";
 import { Paper, Button } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from "react-router-dom";
+import "../styles/Home.css";
+import Header from "../components/Navbar";
+import { Link } from "react-router-dom";
+import img from "../images/img.jpg";
 
 const styles = (theme) => ({
   main: {
@@ -35,10 +39,12 @@ const styles = (theme) => ({
 
 function HomePage(props) {
   const { classes } = props;
-
-  return (
-    <main className={classes.main}>
-      <Paper className={classes.paper}>
+return (
+    <div className="home">
+      <Header />
+      <img src={img} alt="banniere" className="banniere" />
+      <div className="auth-button">
+        <Link to="/sign">
         <Button
           type="submit"
           fullWidth
@@ -49,7 +55,8 @@ function HomePage(props) {
           className={classes.submit}
         >
           Register
-        </Button>
+        </Button>        </Link>
+        <Link to="/login">
         <Button
           type="submit"
           fullWidth
@@ -60,10 +67,11 @@ function HomePage(props) {
           className={classes.submit}
         >
           Login
-        </Button>
-      </Paper>
-    </main>
+        </Button>        </Link>
+      </div>
+    </div>
   );
-}
 
-export default withStyles(styles)(HomePage);
+
+export default withStyles(styles)(Home);
+
