@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
 var firebaseConfig = {
   apiKey: "AIzaSyD4TpfZuZGX52he5xPinF2ix6MvYrDhMHE",
   authDomain: "hackathon-doctolib.firebaseapp.com",
@@ -8,3 +11,7 @@ var firebaseConfig = {
   appId: "1:939555623923:web:d241f324f49ff3ae37f886",
   measurementId: "G-TE29ERW19X",
 };
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
