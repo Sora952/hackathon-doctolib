@@ -1,0 +1,26 @@
+.test {
+  /* background-image: url(https://png.pngtree.com/png-clipart/20190920/original/pngtree-cartoon-doctor-male-doctor-female-doctor-png-transparent-bottom-png-image_4636719.jpg);
+  */
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banniere {
+  width: 99%;
+  height: 300px;
+}
+
+button {
+  position: relative;
+  bottom: 1000px;
+  margin-left: 10px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+p {
+  padding: 90px;
+}
