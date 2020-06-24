@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "api": "cd api && nodemon server.js",
-    "dev": "concurrently \"npm run api\" \"npm start\""
+    "dev": "concurrently -c 'green,blue' \"npm run api\" \"npm start\""
   },
   "husky": {
     "hooks": {
