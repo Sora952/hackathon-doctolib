@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
-import img from "../images/img.jpg";
+import img from "../images/img3.png";
 
 const styles = (theme) => ({
   main: {
@@ -40,6 +40,7 @@ function Home(props) {
   return (
     <div className="home">
       <img src={img} alt="banniere" className="banniere" />
+      <h2 className="titre"> La santé est le trésor de la vie </h2>
       <div className="auth-button">
         <Link
           style={{ textDecoration: "none", color: "var(--white)" }}
