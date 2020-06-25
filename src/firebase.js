@@ -1,6 +1,7 @@
 import app from "firebase/app";
 import "firebase/auth";
 import "firebase/firebase-firestore";
+import "firebase/messaging";
 
 const config = {
   apiKey: "AIzaSyD4TpfZuZGX52he5xPinF2ix6MvYrDhMHE",
@@ -16,6 +17,11 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+    this.messaging = app.messaging();
+    this.messaging.usePublicVapidKey(
+      // Project Settings => Cloud Messaging => Web Push certificates
+      "BMECXYUmhnEz8GUcpAMZYMzr6ddXFYG2RHluxBVsq9byADJYyD4PlmsMADOYoAyMZJglV2orXeJMIiKMR_19Gbs"
+    );
     this.auth = app.auth();
     this.db = app.firestore();
   }
