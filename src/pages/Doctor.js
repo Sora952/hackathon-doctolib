@@ -15,29 +15,12 @@ const styles = (theme) => ({
       marginRight: "auto",
     },
   },
-  paper: {
-    marginTop: theme.spacing.unit * 8,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${
-      theme.spacing.unit * 3
-    }px`,
-  },
-  avatar: {
-    margin: theme.spacing.unit,
-    backgroundColor: theme.palette.secondary.main,
-  },
-  submit: {
-    marginTop: theme.spacing.unit * 3,
-  },
 });
 
-function Gestion(props) {
+function Doctor(props) {
   const { classes } = props;
 
   if (!firebase.getCurrentUsername()) {
-    // not logged in
     alert("Please login first");
     props.history.replace("/login");
     return null;
@@ -46,4 +29,4 @@ function Gestion(props) {
   return <main className={classes.main}>Page gestion des patients</main>;
 }
 
-export default withRouter(withStyles(styles)(Gestion));
+export default withRouter(withStyles(styles)(Doctor));
