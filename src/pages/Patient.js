@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import AlertList from "../components/AlertList";
+import ButtonList from "../components/ButtonList";
 
 class Patient extends Component {
   render() {
@@ -10,6 +11,7 @@ class Patient extends Component {
             {this.props.Firstname} {this.props.Lastname}
           </h1>
           <AlertList />
+          <ButtonList />
         </main>
       </div>
     );
