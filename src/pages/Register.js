@@ -12,6 +12,12 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link, withRouter } from "react-router-dom";
 import firebase from "../firebase";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+import { makeStyles } from "@material-ui/core/styles";
+
 const styles = (theme) => ({
   main: {
     width: "auto",
@@ -46,13 +52,42 @@ const styles = (theme) => ({
   },
 });
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%",
+    "& > * + *": {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
+
 function Register(props) {
   const { classes } = props;
 
   const [name, setName] = useState("");
+  const [name2, setName2] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [quote, setQuote] = useState("");
+  const [jeSuis, setJeSuis] = useState("");
+  const handleChange = (event) => {
+    setJeSuis(event.target.value);
+  };
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <main className={classes.main}>
@@ -68,7 +103,7 @@ function Register(props) {
           onSubmit={(e) => e.preventDefault() && false}
         >
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="Nom">Nom</InputLabel>
+            <InputLabel htmlFor="name">Nom</InputLabel>
             <Input
               id="name"
               name="name"
@@ -79,14 +114,14 @@ function Register(props) {
             />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="name">Prénom</InputLabel>
+            <InputLabel htmlFor="name2">Prénom</InputLabel>
             <Input
-              id="name"
-              name="name"
+              id="name2"
+              name="name2"
               autoComplete="off"
               autoFocus
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={name2}
+              onChange={(e) => setName2(e.target.value)}
             />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
@@ -110,16 +145,22 @@ function Register(props) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
-          <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="quote">Je suis ...</InputLabel>
-            <Input
-              name="quote"
-              type="text"
-              id="quote"
-              autoComplete="off"
-              value={quote}
-              onChange={(e) => setQuote(e.target.value)}
-            />
+          <FormControl
+            margin="normal"
+            required
+            fullWidth
+            className={classes.formControl}
+          >
+            <InputLabel id="jeSuis">Je suis ...</InputLabel>
+            <Select
+              labelId="jeSuis"
+              id="jeSuis"
+              value={jeSuis}
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>Je suis professionnel de santé</MenuItem>
+              <MenuItem value={20}>Je suis un patient</MenuItem>
+            </Select>
           </FormControl>
 
           <Button
@@ -129,9 +170,15 @@ function Register(props) {
             color="primary"
             onClick={onRegister}
             className={classes.submit}
+            onClick={handleClick}
           >
             Register
           </Button>
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="success">
+              This is a success message!
+            </Alert>
+          </Snackbar>
 
           <Button
             type="submit"
@@ -151,9 +198,8 @@ function Register(props) {
 
   async function onRegister() {
     try {
-      await firebase.register(name, email, password);
-      await firebase.addQuote(quote);
-      props.history.replace("/dashboard");
+      await firebase.register(name, name2, email, password, jeSuis);
+      props.history.replace("/patient");
     } catch (error) {
       alert(error.message);
     }
