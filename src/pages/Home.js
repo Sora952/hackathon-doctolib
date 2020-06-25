@@ -41,7 +41,10 @@ function Home(props) {
     <div className="home">
       <img src={img} alt="banniere" className="banniere" />
       <div className="auth-button">
-        <Link to="/sign">
+        <Link
+          style={{ textDecoration: "none", color: "var(--white)" }}
+          to="/sign"
+        >
           <Button
             type="submit"
             fullWidth
@@ -49,12 +52,15 @@ function Home(props) {
             color="secondary"
             component={Link}
             to="/register"
-            className={classes.submit}
+            className={(classes.submit, "sign")}
           >
             Register
           </Button>{" "}
         </Link>
-        <Link to="/login">
+        <Link
+          style={{ textDecoration: "none", color: "var(--white)" }}
+          to="/login"
+        >
           <Button
             type="submit"
             fullWidth
@@ -62,7 +68,7 @@ function Home(props) {
             color="secondary"
             component={Link}
             to="/login"
-            className={classes.submit}
+            className={(classes.submit, "login")}
           >
             Login
           </Button>

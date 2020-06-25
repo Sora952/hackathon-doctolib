@@ -9,25 +9,25 @@
   height: 250px;
 }
 
-.button-login, .button-sign-in {
+.login,
+.sign {
   position: relative;
   width: 200px;
   bottom: 150px;
   padding: 25px;
   border: 1px solid black;
   box-shadow: 0 0 2px black;
-  border-radius: 30px;
+  border-radius: 20px !important;
   background-color: rgba(194, 189, 189, 0.836);
   font-size: 1.1em;
 }
 
-.button-login:hover, .button-sign-in:hover {
+.login:hover,
+.sign:hover {
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   text-decoration: underline;
 }
-
-
 
 @media screen and (min-width: 450px) and (max-width: 600px) {
   p {
@@ -40,7 +40,8 @@
     flex-direction: column;
   }
 
-  .button-login, .button-sign-in {
+  .button-login,
+  .button-sign-in {
     margin-top: 15px;
   }
 
