@@ -35,8 +35,8 @@ export default function App() {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/logind" component={LoginD} />
-              <Route exact path="/loginp" component={LoginP} />
+              <Route exact path="/loginD" component={LoginD} />
+              <Route exact path="/loginP" component={LoginP} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/patient" component={Patient} />
               <Route exact path="/doctor" component={Doctor} />

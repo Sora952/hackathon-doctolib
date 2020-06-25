@@ -22,7 +22,7 @@ function Doctor(props) {
 
   if (!firebase.getCurrentUsername()) {
     alert("Please login first");
-    props.history.replace("/login");
+    props.history.replace("/loginD");
     return null;
   }
 
