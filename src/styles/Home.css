@@ -26,11 +26,21 @@
 .sign:hover {
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  text-decoration: underline;
+  text-decoration: underline !important;
+}
+
+.hook-text-homepage {
+  background-color: rgba(117, 116, 116, 0.89);
+  padding: 15px;
+  text-align: justify;
+  margin: auto;
+  overflow-wrap: normal;
+  font-size: 1.1em;
+  width: 70%;
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px) {
-  p {
+  .hook-text-homepage {
     width: 50%;
   }
 }
@@ -45,7 +55,7 @@
     margin-top: 15px;
   }
 
-  p {
+  .hook-text-homepage {
     width: 30%;
   }
 }

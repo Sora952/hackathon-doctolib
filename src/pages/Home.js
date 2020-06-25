@@ -74,6 +74,11 @@ function Home(props) {
           </Button>
         </Link>
       </div>
+      <p className='hook-text-homepage'>Marre qu'alzaïmer vous fasse tout le temps oublier vos médicaments? Marre que le numéro de votre médecin soit sous une pile de papier?<br />
+      <br />
+      N'attendez plus ! Utilisez notre superbe gestionnaire de santé ! Vous aurez accès à des alertes pour vos médicaments, les infos complètes de votre médecin
+          ainsi que la liste et l'heure à laquelle prendre vos cachets ! Avec ça, fini les excuses du papi qui ne veux pas prendre ses cachets car il "oublie" tout le temps !
+        </p>
     </div>
   );
 }
