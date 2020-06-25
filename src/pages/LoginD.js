@@ -12,10 +12,6 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link, withRouter } from "react-router-dom";
 import firebase from "../firebase";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
-import Snackbar from "@material-ui/core/Snackbar";
-import MuiAlert from "@material-ui/lab/Alert";
 
 const styles = (theme) => ({
   main: {
@@ -51,33 +47,11 @@ const styles = (theme) => ({
   },
 });
 
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
-
-function Register(props) {
+function LoginD(props) {
   const { classes } = props;
 
-  const [name, setName] = useState("");
-  const [name2, setName2] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [jeSuis, setJeSuis] = useState("");
-  const handleChange = (event) => {
-    setJeSuis(event.target.value);
-  };
-  const [open, setOpen] = React.useState(false);
-  const handleClick = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
-    setOpen(false);
-  };
 
   return (
     <main className={classes.main}>
@@ -86,40 +60,19 @@ function Register(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Register Account
+          Sign in
         </Typography>
         <form
           className={classes.form}
           onSubmit={(e) => e.preventDefault() && false}
         >
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="name">Nom</InputLabel>
-            <Input
-              id="name"
-              name="name"
-              autoComplete="off"
-              autoFocus
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </FormControl>
-          <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="name2">Prénom</InputLabel>
-            <Input
-              id="name2"
-              name="name2"
-              autoComplete="off"
-              autoFocus
-              value={name2}
-              onChange={(e) => setName2(e.target.value)}
-            />
-          </FormControl>
-          <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="email">Adresse email</InputLabel>
+            <InputLabel htmlFor="email">Email Address</InputLabel>
             <Input
               id="email"
               name="email"
               autoComplete="off"
+              autoFocus
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -135,65 +88,40 @@ function Register(props) {
               onChange={(e) => setPassword(e.target.value)}
             />
           </FormControl>
-          <FormControl
-            margin="normal"
-            required
-            fullWidth
-            className={classes.formControl}
-          >
-            <InputLabel id="jeSuis">Je suis ...</InputLabel>
-            <Select
-              labelId="jeSuis"
-              id="jeSuis"
-              value={jeSuis}
-              onChange={handleChange}
-            >
-              <MenuItem value={10}>Je suis professionnel de santé</MenuItem>
-              <MenuItem value={20}>Je suis un patient</MenuItem>
-            </Select>
-          </FormControl>
-
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
-            onClick={onRegister}
+            onClick={login}
             className={classes.submit}
-            onClick={handleClick}
           >
-            Register
+            Sign in
           </Button>
-          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-            <Alert onClose={handleClose} severity="success">
-              This is a success message!
-            </Alert>
-          </Snackbar>
-
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="secondary"
             component={Link}
-            to="/loginD"
+            to="/register"
             className={classes.submit}
           >
-            Go back to Login
+            Register
           </Button>
         </form>
       </Paper>
     </main>
   );
 
-  async function onRegister() {
+  async function login() {
     try {
-      await firebase.register(name, name2, email, password, jeSuis);
-      props.history.replace("/patient");
+      await firebase.login(email, password);
+      props.history.replace("/doctor");
     } catch (error) {
       alert(error.message);
     }
   }
 }
 
-export default withRouter(withStyles(styles)(Register));
+export default withRouter(withStyles(styles)(LoginD));

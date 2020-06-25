@@ -1,0 +1,72 @@
+.globalAlerts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40vh;
+  width: 80vw;
+  overflow: auto;
+  padding: 10px 5px;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.list-alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.HeaderCard {
+  background-color: orangered;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.HeaderCard h3 {
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.timeRemaining p {
+  margin: auto;
+  width: auto;
+  padding: 10px 0px;
+}
+
+.card-button {
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.card-button button {
+  margin-bottom: 10px;
+  padding: 1px 5px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.first {
+  color: red;
+}
+
+.second {
+  color: orange;
+}
+
+.third {
+  color: green;
+}
+
+.list-alert {
+  list-style-type: none;
+}

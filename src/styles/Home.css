@@ -9,16 +9,18 @@
   height: 250px;
 }
 
+.titre {
+  position: relative;
+  bottom: 250px;
+}
+
 .login,
 .sign {
   position: relative;
   width: 200px;
-  bottom: 150px;
+  bottom: 135px;
   padding: 25px;
-  border: 1px solid black;
-  box-shadow: 0 0 2px black;
   border-radius: 20px !important;
-  background-color: rgba(194, 189, 189, 0.836);
   font-size: 1.1em;
 }
 

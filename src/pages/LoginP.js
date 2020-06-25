@@ -47,7 +47,7 @@ const styles = (theme) => ({
   },
 });
 
-function SignIn(props) {
+function LoginP(props) {
   const { classes } = props;
 
   const [email, setEmail] = useState("");
@@ -117,11 +117,11 @@ function SignIn(props) {
   async function login() {
     try {
       await firebase.login(email, password);
-      props.history.replace("/dashboard");
+      props.history.replace("/patient");
     } catch (error) {
       alert(error.message);
     }
   }
 }
 
-export default withRouter(withStyles(styles)(SignIn));
+export default withRouter(withStyles(styles)(LoginP));
