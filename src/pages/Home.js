@@ -67,7 +67,7 @@ function Home(props) {
             variant="contained"
             color="secondary"
             component={Link}
-            to="/login"
+            to="/loginD"
             className={(classes.submit, "login")}
           >
             Login
