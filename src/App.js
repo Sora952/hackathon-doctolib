@@ -15,10 +15,29 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Medicament from "./pages/Medicament";
 
+firebase.messaging.onMessage((payload) =>
+  console.log("Message received. ", payload)
+);
+
 const theme = createMuiTheme();
 
 export default function App() {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+  const messaging = firebase.messaging;
+  useEffect(() => {
+    messaging
+      .requestPermission()
+      .then(async function () {
+        const token = await messaging.getToken();
+        console.log(token);
+      })
+      .catch(function (err) {
+        console.log("Unable to get permission to notify.", err);
+      });
+    navigator.serviceWorker.addEventListener("message", (message) =>
+      console.log(message)
+    );
+  }, []);
 
   useEffect(() => {
     firebase.isInitialized().then((val) => {
