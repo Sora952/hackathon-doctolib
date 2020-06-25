@@ -6,12 +6,13 @@ import Link from "@material-ui/core/Link";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary">
+    <Typography
+      style={{ color: "var(--white)" }}
+      variant="body2"
+      color="textSecondary"
+    >
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Hackathon
-      </Link>{" "}
-      {new Date().getFullYear()}
+      <Link color="inherit">Hackathon</Link> {new Date().getFullYear()}
       {"."}
     </Typography>
   );
