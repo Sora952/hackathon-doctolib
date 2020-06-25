@@ -46,9 +46,6 @@ export default function Footer() {
         style={{ backgroundColor: "var(--blue)" }}
       >
         <Container maxWidth="sm">
-          <Typography variant="body1">
-            La santé est le trésor de la vie.
-          </Typography>
           <Copyright />
         </Container>
       </footer>
