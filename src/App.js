@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Login from "./pages/Login";
+import LoginP from "./pages/LoginP";
+import LoginD from "./pages/LoginD";
 import Register from "./pages/Register";
 import Patient from "./pages/Patient";
 import Doctor from "./pages/Doctor";
@@ -34,7 +35,8 @@ export default function App() {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
+              <Route exact path="/logind" component={LoginD} />
+              <Route exact path="/loginp" component={LoginP} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/patient" component={Patient} />
               <Route exact path="/doctor" component={Doctor} />
