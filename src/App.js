@@ -16,7 +16,7 @@ import Header from "./components/Header";
 import Medicament from "./pages/Medicament";
 import InfoDoctor from "./pages/infoDoctor";
 import Appointment from "./pages/Appointment";
-import MedicationHard from './pages/Medication_hard';
+import MedicationHard from "./pages/Medication_hard";
 
 firebase.messaging.onMessage((payload) =>
   console.log("Message received. ", payload)

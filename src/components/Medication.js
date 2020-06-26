@@ -9,8 +9,11 @@ class Medication extends Component {
   }
 
   createTasks(item) {
-    return <li onClick={() => this.delete(item.key)} 
-    key={item.key}>{item.text}</li>
+    return (
+      <li onClick={() => this.delete(item.key)} key={item.key}>
+        {item.text}
+      </li>
+    );
   }
 
   delete(key) {
@@ -29,6 +32,6 @@ class Medication extends Component {
       </ul>
     );
   }
-};
+}
 
 export default Medication;
