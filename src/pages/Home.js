@@ -70,13 +70,17 @@ function Home(props) {
         </Link>
       </div>
       <p className="hook-text-homepage">
-        Tired of Alzaïmer making you forget your medication all the time? Tired
-        of your doctor's phone number under a pile of paper? Don't wait any
-        longer! Use our superb health manager! You will have access to alerts
-        for your medicines, your doctor's complete information and the alert
-        list for taking your medicines on time. With it, No more excuse of your
-        grandpa who doesn't want to take his pills because he "forgets" all the
-        time!
+        <p>
+          Tired of Alzheimer making you forget your medication all the time?
+        </p>
+        <p>Tired of your doctor's phone number under a pile of paper?</p>
+        <p>Don't wait any longer. Use our superb health manager!</p>
+        <p>
+          You will have access to alerts for your medicines, your doctor's
+          complete information and the alert list for taking your medicines on
+          time. With it, No more excuse of your grandpa who doesn't want to take
+          his pills because he "forgets" all the time!
+        </p>
       </p>
     </div>
   );
