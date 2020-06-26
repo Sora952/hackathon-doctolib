@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+// import moment from "moment";
 import "../styles/CardAlert.css";
 
 const DrugCardAlert = ({ alert, deletedDrugs }) => {
@@ -20,8 +20,7 @@ const DrugCardAlert = ({ alert, deletedDrugs }) => {
               </div>
               <div className="timeRemaining">
                 <p>
-                  {moment().endOf(prescriptionDate).fromNow()} h left before
-                  taking it.
+                  h left before taking it.
                 </p>
               </div>
               <div className="card-button">
