@@ -21,73 +21,96 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     maxWidth: 400,
-    margin: `${theme.spacing(3)}px auto`,
+    margin: `auto ${theme.spacing(3)}px`,
     padding: theme.spacing(2),
-    backgroundColor: "#37aad4",
+    backgroundColor: "#eee",
   },
   typo: {
-    marginTop: "10px",
+    fontSize: "1.1rem",
+    height: "25px",
+    marginTop: "auto",
+    marginBottom: "auto",
+    width: "250px",
+  },
+  doctorPhotoName: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    marginBottom: "25px",
+  },
+  doctorPhoto: {
+    height: "20vw",
+    width: "20vw",
+  },
+  infostyle: {
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+  doctorPhotoOther: {
+    margin: "auto",
+    height: "80px",
   },
 }));
 
-const doctorName = "armin LeGrandFou";
+const doctorName = "Armin LeGrandFou";
 const mail = "grandFanDe@materialUI.fr";
 const numero = "06 66 66 66 66";
-const location = "Chez lui, à faire ses PR de la nuit.";
+const location = "At home";
 
 const InfoDoctor = () => {
   const classes = useStyles();
 
   return (
     <div>
-      <h1>Mon Médecin-Esclavagiste</h1>
+      <h1>My prefer doctor</h1>
       <div className="info-doctor">
-        <Paper className={classes.paper}>
-          <Grid container wrap="nowrap" spacing={2}>
-            <Grid item>
-              <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-            </Grid>
-            <Grid item xs zeroMinWidth>
-              <Typography noWrap className={classes.typo}>
-                {doctorName}
-              </Typography>
-            </Grid>
+        <div className={classes.doctorPhotoName}>
+          <Grid item>
+            <Avatar
+              className={classes.doctorPhoto}
+              alt="Cindy Baker"
+              src="/static/images/avatar/3.jpg"
+            />
           </Grid>
-        </Paper>
-        <Paper className={classes.paper}>
-          <Grid container wrap="nowrap" spacing={2}>
-            <Grid item>
-              <EmailIcon fontSize="large" />
-            </Grid>
-            <Grid item xs zeroMinWidth>
-              <Typography noWrap className={classes.typo}>
-                {mail}
-              </Typography>
-            </Grid>
+          <Typography noWrap className={classes.typo}>
+            {doctorName}
+          </Typography>
+        </div>
+
+        <div className={classes.infostyle}>
+          <Grid item>
+            <EmailIcon className={classes.doctorPhotoOther} fontSize="large" />
           </Grid>
-        </Paper>
-        <Paper className={classes.paper}>
-          <Grid container wrap="nowrap" spacing={2}>
-            <Grid item>
-              <CallIcon fontSize="large" />
-            </Grid>
-            <Grid item xs>
-              <Typography noWrap className={classes.typo}>
-                {numero}
-              </Typography>
-            </Grid>
+          <Paper className={classes.paper}>
+            <Typography noWrap className={classes.typo}>
+              {mail}
+            </Typography>
+          </Paper>
+        </div>
+
+        <div className={classes.infostyle}>
+          <Grid item>
+            <CallIcon className={classes.doctorPhotoOther} fontSize="large" />
           </Grid>
-        </Paper>
-        <Paper className={classes.paper}>
-          <Grid container wrap="nowrap" spacing={2}>
-            <Grid item>
-              <PersonPinCircleIcon fontSize="large" />
-            </Grid>
-            <Grid item xs>
-              <Typography className={classes.typo}>{location}</Typography>
-            </Grid>
+          <Paper className={classes.paper}>
+            <Typography noWrap className={classes.typo}>
+              {numero}
+            </Typography>
+          </Paper>
+        </div>
+
+        <div className={classes.infostyle}>
+          <Grid item>
+            <PersonPinCircleIcon
+              className={classes.doctorPhotoOther}
+              fontSize="large"
+            />
           </Grid>
-        </Paper>
+          <Paper className={classes.paper}>
+            <Typography noWrap className={classes.typo}>
+              {location}
+            </Typography>
+          </Paper>
+        </div>
       </div>
     </div>
   );
