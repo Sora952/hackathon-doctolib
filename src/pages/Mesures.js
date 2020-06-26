@@ -67,7 +67,7 @@ class Mesures extends React.Component {
     return (
       <div>
         <body>
-          <p>{this.state.items.text}</p>
+          <p className="prescrition-title">Mesures</p>
           <ListItems
             items={this.state.items}
             deleteItem={this.deleteItem}
