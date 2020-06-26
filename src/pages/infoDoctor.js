@@ -8,6 +8,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import CallIcon from "@material-ui/icons/Call";
 import PersonPinCircleIcon from "@material-ui/icons/PersonPinCircle";
 import "../styles/infoDoctor.css";
+import img from "../images/58.jpg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,24 +52,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const doctorName = "Armin LeGrandFou";
-const mail = "grandFanDe@materialUI.fr";
-const numero = "06 66 66 66 66";
-const location = "At home";
+const doctorName = "Docteur Denfer";
+const mail = "dr.denfer@power.com";
+const numero = "04 42 55 50 33";
+const location = "666, rue du Paradis, 69069 LYON";
 
 const InfoDoctor = () => {
   const classes = useStyles();
 
   return (
     <div>
-      <h1>My prefer doctor</h1>
+      <h1>My doctor</h1>
       <div className="info-doctor">
         <div className={classes.doctorPhotoName}>
           <Grid item>
             <Avatar
               className={classes.doctorPhoto}
               alt="Cindy Baker"
-              src="/static/images/avatar/3.jpg"
+              src={img}
+              width="96%"
             />
           </Grid>
           <Typography noWrap className={classes.typo}>
