@@ -54,7 +54,7 @@ export default function ButtonList() {
       <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
-            <img src={img5} alt="Analysis" />
+            <img src={img5} alt="Mesures" />
           </Avatar>
         </ListItemAvatar>
         <ListItemText className={classes.ListItemText} primary="My analysis" />
@@ -63,7 +63,7 @@ export default function ButtonList() {
       <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
-            <img src={img6} alt="Doctor" />
+            <img src={img6} alt="Medicament" />
           </Avatar>
         </ListItemAvatar>
         <ListItemText className={classes.ListItemText} primary="My doctors" />
