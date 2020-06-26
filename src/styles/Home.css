@@ -40,24 +40,3 @@
   font-size: 1.1em;
   width: 70%;
 }
-
-@media screen and (min-width: 450px) and (max-width: 600px) {
-  .hook-text-homepage {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .auth-button {
-    flex-direction: column;
-  }
-
-  .button-login,
-  .button-sign-in {
-    margin-top: 15px;
-  }
-
-  .hook-text-homepage {
-    width: 30%;
-  }
-}

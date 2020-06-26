@@ -42,10 +42,7 @@ function Home(props) {
       <img src={img} alt="banniere" className="banniere" />
       <h2 className="titre"> La santé est le trésor de la vie </h2>
       <div className="auth-button">
-        <Link
-          style={{ textDecoration: "none", color: "var(--white)" }}
-          to="/sign"
-        >
+        <Link style={{ textDecoration: "none", color: "var(--white)" }}>
           <Button
             type="submit"
             fullWidth
@@ -58,10 +55,7 @@ function Home(props) {
             Register
           </Button>{" "}
         </Link>
-        <Link
-          style={{ textDecoration: "none", color: "var(--white)" }}
-          to="/login"
-        >
+        <Link style={{ textDecoration: "none", color: "var(--white)" }}>
           <Button
             type="submit"
             fullWidth
