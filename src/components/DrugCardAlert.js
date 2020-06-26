@@ -19,9 +19,7 @@ const DrugCardAlert = ({ alert, deletedDrugs }) => {
                 </h3>
               </div>
               <div className="timeRemaining">
-                <p>
-                  h left before taking it.
-                </p>
+                <p>h left before taking it.</p>
               </div>
               <div className="card-button">
                 <button className="first" type="button" onClick="" onSubmit="">
