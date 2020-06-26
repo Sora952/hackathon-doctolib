@@ -13,10 +13,8 @@ import img7 from "../images/img7.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    // alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    width: "100px",
     margin: "auto",
     "& > *": {
       margin: theme.spacing(1),
@@ -29,11 +27,13 @@ const useStyles = makeStyles((theme) => ({
   ListItem: {
     width: "200px",
     margin: "5px auto",
-    border: "1px solid lightgray",
-    backgroundColor: "rgb(211, 211, 211)",
+    border: "2px solid lightgray",
+    backgroundColor: "#bdbdbd",
+    borderRadius: "10px",
   },
   ListItemText: {
     marginLeft: "5px",
+    fontWeight: "bold",
   },
 }));
 

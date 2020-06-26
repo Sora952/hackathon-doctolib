@@ -14,7 +14,7 @@ const AlertList = () => {
 
   return (
     <div>
-      <h2>Medication alert</h2>
+      <h2>Prescription alert</h2>
       <div>
         <DrugCardAlert alert={drugs} deletedDrugs={takeMedicament} />
       </div>
