@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Medicament from "./pages/Medicament";
 import InfoDoctor from "./pages/infoDoctor";
+import Appointment from "./pages/Appointment";
 
 firebase.messaging.onMessage((payload) =>
   console.log("Message received. ", payload)
@@ -63,6 +64,7 @@ export default function App() {
               <Route exact path="/list" component={List} />
               <Route exact path="/medicament" component={Medicament} />
               <Route exact path="/infodoctor" component={InfoDoctor} />
+              <Route exact path="/appointment" component={Appointment} />
             </Switch>
           </main>
           <Footer />
