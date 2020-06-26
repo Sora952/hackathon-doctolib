@@ -117,7 +117,7 @@ function LoginD(props) {
   async function login() {
     try {
       await firebase.login(email, password);
-      props.history.replace("/doctor");
+      props.history.replace("/listpatient");
     } catch (error) {
       alert(error.message);
     }
