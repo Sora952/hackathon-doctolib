@@ -62,7 +62,7 @@ export default function App() {
               <Route exact path="/doctor" component={Doctor} />
               <Route exact path="/list" component={List} />
               <Route exact path="/medicament" component={Medicament} />
-              <Route exact path='/infodoctor' component={InfoDoctor} />
+              <Route exact path="/infodoctor" component={InfoDoctor} />
             </Switch>
           </main>
           <Footer />

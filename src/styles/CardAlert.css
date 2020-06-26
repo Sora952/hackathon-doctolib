@@ -1,7 +1,6 @@
 .globalAlerts {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 40vh;
   width: 80vw;
   overflow: auto;
