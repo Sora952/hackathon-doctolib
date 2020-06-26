@@ -8,7 +8,7 @@ class Patient extends Component {
       <div>
         <main>
           <h1>
-            {this.props.Firstname} {this.props.Lastname}
+            {this.props.firstname} {this.props.lastname}
           </h1>
           <AlertList />
           <ButtonList />

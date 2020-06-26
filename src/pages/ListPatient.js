@@ -9,7 +9,8 @@ import img8 from "../images/44.jpg";
 import img9 from "../images/95.jpg";
 import img10 from "../images/17.jpg";
 import img11 from "../images/59.jpg";
-import AddButton from "../components/addButton";
+import addButton from "../components/addButton";
+import "../styles/Doctor.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +22,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     margin: "auto",
+    // overflow: "auto",
+    // height: "60vh",
     "& > *": {
       margin: theme.spacing(1),
       marginTop: "10px",
@@ -36,12 +39,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Appointment() {
+export default function ListPatient() {
   const classes = useStyles();
 
   return (
     <div className="list-doctor">
-      <h1>Appointments</h1>
+      <h1>Patient List</h1>
       <List className={classes.root}>
         <ListItem className={classes.AppointmentCard}>
           <ListItemAvatar>
@@ -90,8 +93,44 @@ export default function Appointment() {
             secondary="Tuesday, June 30, 5:00 PM"
           />
         </ListItem>
+
+        <ListItem className={classes.AppointmentCard}>
+          <ListItemAvatar>
+            <Avatar className={classes.large}>
+              <img width="96%" src={img11} alt="img" />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Hugh Moore"
+            secondary="Tuesday, June 30, 5:00 PM"
+          />
+        </ListItem>
+
+        <ListItem className={classes.AppointmentCard}>
+          <ListItemAvatar>
+            <Avatar className={classes.large}>
+              <img width="96%" src={img11} alt="img" />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Hugh Moore"
+            secondary="Tuesday, June 30, 5:00 PM"
+          />
+        </ListItem>
+
+        <ListItem className={classes.AppointmentCard}>
+          <ListItemAvatar>
+            <Avatar className={classes.large}>
+              <img width="96%" src={img11} alt="img" />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText
+            primary="Hugh Moore"
+            secondary="Tuesday, June 30, 5:00 PM"
+          />
+        </ListItem>
+        <addButton />
       </List>
-      <AddButton />
     </div>
   );
 }

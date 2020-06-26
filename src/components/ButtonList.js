@@ -13,10 +13,8 @@ import img7 from "../images/img7.png";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    // alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    width: "100px",
     margin: "auto",
     "& > *": {
       margin: theme.spacing(1),
@@ -26,6 +24,17 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(8),
     height: theme.spacing(8),
   },
+  ListItem: {
+    width: "200px",
+    margin: "5px auto",
+    border: "2px solid lightgray",
+    backgroundColor: "#bdbdbd",
+    borderRadius: "10px",
+  },
+  ListItemText: {
+    marginLeft: "5px",
+    fontWeight: "bold",
+  },
 }));
 
 export default function ButtonList() {
@@ -33,40 +42,40 @@ export default function ButtonList() {
 
   return (
     <List className={classes.root}>
-      <ListItem>
+      <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
             <img src={img4} alt="Medication" />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Medication" />
+        <ListItemText className={classes.ListItemText} primary="Medication" />
       </ListItem>
 
-      <ListItem>
+      <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
             <img src={img5} alt="Analysis" />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="My analysis" />
+        <ListItemText className={classes.ListItemText} primary="My analysis" />
       </ListItem>
 
-      <ListItem>
+      <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
             <img src={img6} alt="Doctor" />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="My doctors" />
+        <ListItemText className={classes.ListItemText} primary="My doctors" />
       </ListItem>
 
-      <ListItem>
+      <ListItem className={classes.ListItem}>
         <ListItemAvatar>
           <Avatar className={classes.large}>
             <img src={img7} alt="Appointement" />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Appointement" />
+        <ListItemText className={classes.ListItemText} primary="Appointement" />
       </ListItem>
     </List>
   );

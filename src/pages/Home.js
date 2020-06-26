@@ -40,12 +40,9 @@ function Home(props) {
   return (
     <div className="home">
       <img src={img} alt="banniere" className="banniere" />
-      <h2 className="titre"> La santé est le trésor de la vie </h2>
+      <h2 className="titre"> Health is the treasure of life </h2>
       <div className="auth-button">
-        <Link
-          style={{ textDecoration: "none", color: "var(--white)" }}
-          to="/sign"
-        >
+        <Link style={{ textDecoration: "none", color: "var(--white)" }}>
           <Button
             type="submit"
             fullWidth
@@ -58,10 +55,7 @@ function Home(props) {
             Register
           </Button>{" "}
         </Link>
-        <Link
-          style={{ textDecoration: "none", color: "var(--white)" }}
-          to="/login"
-        >
+        <Link style={{ textDecoration: "none", color: "var(--white)" }}>
           <Button
             type="submit"
             fullWidth
@@ -76,15 +70,13 @@ function Home(props) {
         </Link>
       </div>
       <p className="hook-text-homepage">
-        Marre qu'alzaïmer vous fasse tout le temps oublier vos médicaments?
-        Marre que le numéro de votre médecin soit sous une pile de papier?
-        <br />
-        <br />
-        N'attendez plus ! Utilisez notre superbe gestionnaire de santé ! Vous
-        aurez accès à des alertes pour vos médicaments, les infos complètes de
-        votre médecin ainsi que la liste et l'heure à laquelle prendre vos
-        cachets ! Avec ça, fini les excuses du papi qui ne veux pas prendre ses
-        cachets car il "oublie" tout le temps !
+        Tired of Alzaïmer making you forget your medication all the time? Tired
+        of your doctor's phone number under a pile of paper? Don't wait any
+        longer! Use our superb health manager! You will have access to alerts
+        for your medicines, your doctor's complete information and the alert
+        list for taking your medicines on time. With it, No more excuse of your
+        grandpa who doesn't want to take his pills because he "forgets" all the
+        time!
       </p>
     </div>
   );

@@ -93,7 +93,7 @@ function Register(props) {
           onSubmit={(e) => e.preventDefault() && false}
         >
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="name">Nom</InputLabel>
+            <InputLabel htmlFor="name">Lastname</InputLabel>
             <Input
               id="name"
               name="name"
@@ -104,7 +104,7 @@ function Register(props) {
             />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="name2">Prénom</InputLabel>
+            <InputLabel htmlFor="name2">Firstname</InputLabel>
             <Input
               id="name2"
               name="name2"
@@ -115,7 +115,7 @@ function Register(props) {
             />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="email">Adresse email</InputLabel>
+            <InputLabel htmlFor="email">email</InputLabel>
             <Input
               id="email"
               name="email"
@@ -141,15 +141,15 @@ function Register(props) {
             fullWidth
             className={classes.formControl}
           >
-            <InputLabel id="jeSuis">Je suis ...</InputLabel>
+            <InputLabel id="jeSuis">I am ...</InputLabel>
             <Select
               labelId="jeSuis"
               id="jeSuis"
               value={jeSuis}
               onChange={handleChange}
             >
-              <MenuItem value={10}>Je suis professionnel de santé</MenuItem>
-              <MenuItem value={20}>Je suis un patient</MenuItem>
+              <MenuItem value={10}>I am a healthcare professional</MenuItem>
+              <MenuItem value={20}>I am a patient</MenuItem>
             </Select>
           </FormControl>
 
