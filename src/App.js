@@ -4,8 +4,6 @@ import LoginP from "./pages/LoginP";
 import LoginD from "./pages/LoginD";
 import Register from "./pages/Register";
 import Patient from "./pages/Patient";
-import Doctor from "./pages/Doctor";
-import { List } from "./pages/List";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline, CircularProgress } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -18,7 +16,7 @@ import InfoDoctor from "./pages/infoDoctor";
 import Appointment from "./pages/Appointment";
 import MedicationHard from "./pages/Medication_hard";
 import ListPatient from "./pages/ListPatient";
-
+import Mesures from "./pages/Mesures";
 
 firebase.messaging.onMessage((payload) =>
   console.log("Message received. ", payload)
@@ -63,12 +61,11 @@ export default function App() {
               <Route exact path="/loginP" component={LoginP} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/patient" component={Patient} />
-              <Route exact path="/doctor" component={Doctor} />
-              <Route exact path="/list" component={List} />
               <Route exact path="/medicament" component={Medicament} />
+              <Route exact path="/mesures" component={Mesures} />
+              <Route exact path="/medication_hard" component={MedicationHard} />
               <Route exact path="/infodoctor" component={InfoDoctor} />
               <Route exact path="/appointment" component={Appointment} />
-              <Route exact path="/medication_hard" component={MedicationHard} />
               <Route exact path="/listpatient" component={ListPatient} />
             </Switch>
           </main>

@@ -7,7 +7,7 @@ import AddButton from "../components/addButton";
 
 library.add(faTrash);
 
-class Doctor extends React.Component {
+class Mesures extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,13 +76,11 @@ class Doctor extends React.Component {
           <form id="to-do-form" onSubmit={this.addItem}>
             <input
               type="text"
-              placeholder="Enter Medicament"
+              placeholder="Enter Mesures"
               value={this.state.currentItem.text}
               onChange={this.handleInput}
             />
-            <button>
-              <AddButton type="submit" />
-            </button>
+            <AddButton type="submit" />
           </form>
         </body>
       </div>
@@ -90,4 +88,4 @@ class Doctor extends React.Component {
   }
 }
 
-export default Doctor;
+export default Mesures;
