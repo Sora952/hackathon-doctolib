@@ -1,20 +1,15 @@
-import React from "react"; //, {useState}
+import React, { useState } from "react";
 import Prescriptions from "../test/test";
 import DrugCardAlert from "./DrugCardAlert";
 import "../styles/CardAlert.css";
 
 const AlertList = () => {
-  // const [drugs, setDrug] = useState([]);
-
-  // setDrug(Prescriptions[0].drugs);
-
-  const drugs = Prescriptions[0].drugs;
+  const [drugs, setDrug] = useState(Prescriptions[0].drugs);
 
   const takeMedicament = (id) => {
     console.log(id);
     const filteredDrugs = drugs.filter((oneDrug) => oneDrug.id !== id);
-    // setDrug(filteredDrugs);
-    return filteredDrugs;
+    setDrug(filteredDrugs);
   };
 
   return (

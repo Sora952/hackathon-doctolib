@@ -25,10 +25,10 @@ const DrugCardAlert = ({ alert, deletedDrugs }) => {
                 </p>
               </div> */}
               <div className="card-button">
-                <button className="first" type="button" onClick="" onSubmit="">
+                <button className="first" type="button">
                   Don't take
                 </button>
-                <button className="second" type="button" onClick="" onSubmit="">
+                <button className="second" type="button">
                   Remind me
                 </button>
                 <button
