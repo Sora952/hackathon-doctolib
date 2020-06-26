@@ -45,7 +45,7 @@ export default function ButtonList() {
   return (
     <div className="patient">
       <List className={classes.root}>
-        <Link to="/medication">
+        <Link to="/medication_hard">
           <ListItem className={classes.ListItem}>
             <ListItemAvatar>
               <Avatar className={classes.large}>
