@@ -27,11 +27,11 @@ const useStyles = makeStyles((theme) => ({
     width: "200px",
     margin: "5px auto",
     border: "1px solid lightgray",
-    backgroundColor: "rgb(211, 211, 211)"
+    backgroundColor: "rgb(211, 211, 211)",
   },
   ListItemText: {
-    marginLeft: "5px"
-  }
+    marginLeft: "5px",
+  },
 }));
 
 export default function ButtonList() {
