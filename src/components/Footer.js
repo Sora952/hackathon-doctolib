@@ -12,7 +12,7 @@ function Copyright() {
       color="textSecondary"
     >
       {"Copyright © "}
-      <Link color="inherit">Hackathon</Link> {new Date().getFullYear()}
+      <Link color="inherit">E-pill Box</Link> {new Date().getFullYear()}
       {"."}
     </Typography>
   );

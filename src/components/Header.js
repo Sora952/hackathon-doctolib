@@ -31,7 +31,7 @@ export default function Header() {
               color="inherit"
               aria-label="open drawer"
             >
-              Hackathon
+              E-pill Box
             </IconButton>
           </Link>
         </Toolbar>
