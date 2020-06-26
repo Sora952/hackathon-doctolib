@@ -66,7 +66,7 @@ class Doctor extends React.Component {
   render() {
     return (
       <div>
-        <header>
+        <body>
           <p>{this.state.items.text}</p>
           <ListItems
             items={this.state.items}
@@ -84,7 +84,7 @@ class Doctor extends React.Component {
               <AddButton type="submit" />
             </button>
           </form>
-        </header>
+        </body>
       </div>
     );
   }
