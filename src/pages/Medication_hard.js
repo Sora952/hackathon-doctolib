@@ -14,6 +14,7 @@ function Medication() {
   return (
     <div>
       <body>
+        <p className="prescrition-title">Prescription</p>
         <div className="list">
           <p>
             <input type="text" id="1" value={medications[0]} />
